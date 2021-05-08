@@ -1,0 +1,441 @@
+/* common-stlyes */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 400;
+}
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: #ccc;
+}
+/* End of common-styles*/
+/*Menu*/
+.menu
+{
+    width: 4rem;
+    height: 1.5rem;
+    position: fixed;
+    top:3rem;
+    left:2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: visible;
+    transition: 0.3s;
+}
+.menu-line-1
+{
+    width:100%;
+    height: 0.2rem;
+    background-color: 
+    #babfbb
+    ;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 0.5s ;
+    box-shadow: 0.3rem 0.3rem 0.9rem rgba(0,0,0,0.8);
+}
+.menu-line-2
+{
+    width:100%;
+    height: 0.2rem;
+    background-color: 
+    #babfbb
+    ;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: 0.5s;
+    box-shadow: 0.3rem 0.3rem 0.9rem rgba(0,0,0,0.8);
+}
+.change.menu
+{
+    left:15vw;
+    transform: rotate(45deg);
+}
+.change.menu .menu-line-1
+{   
+    transform:translateX(-0.1rem) rotate(270deg);
+}
+.change .menu-line-2
+{   
+    transform:translateY(-1.3rem)rotate(360deg) ;
+}
+/*End of menu*/
+/*Navbar*/
+.navbar
+{
+    width: 15vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:-15vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding-top: 5rem;
+    text-transform: uppercase;
+    transition: left 0.5s;
+}
+.change.navbar
+{
+    left:0;
+    width:15vw;
+}
+.navbar a
+{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: grey;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    transition: all 0.7s;
+}
+.navbar a:hover
+{
+    color: black;
+}
+/*End of navbar*/
+/*common-section-style*/
+.wrapper
+{
+    width:100%;
+    height: 100vh;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    overflow: hidden;
+}
+.change.wrapper
+{
+    perspective: 50rem;
+}
+section
+{
+    width:100%;
+    height: 100vh;
+    box-shadow: 0.5rem 0.5rem 1rem #aaa;
+    background-color: #efefef;
+    position: relative;
+    left: 0;
+    transition: left 0.2s 0.3s,transform 0.3s;
+}
+.change.wrapper section
+{   
+    width:100%;
+    left: 15vw;
+    transform:rotateY(10deg);
+    transform-origin: left;
+    transition: left 0.5s,transform 0.5s; 
+}
+/*End-of-common-section-style*/
+/* section-1 */
+.section-1
+{
+    background: url('images/bg-section1.jpg');
+    object-fit: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-heading
+{
+    color: #bcc2be;
+    text-shadow: 2rem 2rem 2rem #000;
+    font-size: 7rem;
+    font-weight: 1000;
+    font-family: 'Zilla Slab',sans-serif;
+}
+.image-1
+{   
+    margin-top: 3rem;
+    width:85rem;
+}
+/* End of section-1 */
+/*section-2*/
+.section-2
+{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(35deg,#000,#2c2e2c);
+}
+.images-wrapper
+{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+}
+.image
+{
+    background-color: white;
+    width:33rem;
+    height:30rem;
+    margin: 3rem;
+    position: relative;
+    box-shadow: 0.3rem 0.3rem 1rem #000;
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+.image:hover
+{
+    opacity:1;
+    box-shadow: 1rem 1rem 1rem #000;
+}
+.ii
+{
+    width:31rem;
+    position: absolute;
+    left:1rem;
+    top:1rem;
+    right:1rem;
+    bottom:1rem;
+}
+.car-name
+{
+    position: absolute;
+    top:2rem;
+    left:2rem;
+    font-family: 'Exo 2',sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.8);
+}
+.section-heading-2
+{
+    font-family: 'Zilla Slab',sans-serif;
+    font-size:7rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2rem 2rem 2rem #000;
+}
+.price
+{   
+    position: absolute;
+    top:22rem;
+    left:1rem;
+    font-size: 2rem;
+    text-shadow: 0.3rem 0.3rem 1rem rgba(0,0,0,0.8);
+    font-family: 'Exo 2';
+    font-weight: 800;
+}
+.image-btn
+{   
+    width:31rem;
+    height:3rem;
+    margin-left: 1rem;
+    position: absolute;
+    bottom:1rem;
+    background: linear-gradient(35deg,#000,#6a6e6b);
+    border: #000 solid thin;
+    color:#fff; 
+    font-family: 'Exo 2';
+    font-weight: 800;
+    text-shadow: 0.3rem 0.3rem 1rem rgba(0,0,0,0.8);
+    box-shadow: 0.3rem 0.3rem 1rem #000;
+    cursor: pointer;
+}
+/*End of section-2*/
+/* Section-3 */
+.section-3
+{
+    background: url('images/5-websites-to-download-free-subtle-textures-subtle.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-3-heading
+{
+    font-family: 'Zilla Slab';
+    font-size: 7rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    text-shadow: 0.5rem 0.5rem 1rem #000;
+}
+.video-wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6rem;
+}
+.vid
+{
+    width: 35rem;
+    margin-right: 5rem;
+    margin-bottom:5rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #000;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.vid:hover
+{
+    box-shadow: 0.7rem 0.7rem 1rem #000;
+}
+/* End of section-3 */
+/* Section-4 */
+.section-4
+{
+    background: url('images/back.jpg');
+    object-fit: cover;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.section-4-heading
+{
+    font-family: 'Zilla Slab',sans-serif;
+    font-size:7rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    margin-top: 0rem;
+    color: #fff;
+    text-shadow: 2rem 2rem 2rem #000;  
+}
+.img
+{
+    width: 20%;
+    margin: 2rem 2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    top:50rem;
+    transition: all 0.5s;
+    box-shadow: 0.6rem 0.2rem 1rem #000;
+}
+.img-1
+{
+    top: -1rem;
+    z-index: 10;
+    left: 17rem;
+    transform: rotateX(1deg);
+    transform-origin: bottom;
+}
+.img:hover
+{
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+    box-shadow: 0.1rem 0.1rem 1rem #000;
+}
+.img-2
+{
+    top: -2rem;
+    z-index: 10;
+    left: 50rem;
+    transform: rotateX(1deg);
+    transform-origin: bottom;
+}
+.img-3
+{
+    top:-1rem;
+    z-index:10;
+    left: 83rem;
+    transform: rotateX(0.5deg);
+    transform-origin: bottom;
+}
+.img-4
+{
+    top: 20rem;
+    z-index: 10;
+    left: 50rem;
+    transform: rotateX(1.5deg);
+    transform-origin: bottom;
+}
+.img-5
+{
+    top: 20rem;
+    z-index: 10;
+    left: 17rem;
+    transform: rotateX(1deg);
+    transform-origin: bottom;
+}
+.img-6
+{
+    top:20rem;
+    z-index:10;
+    left: 83rem;
+    transform: rotateX(0.5deg);
+    transform-origin: bottom; 
+}
+.image-wrapper-1
+{
+    perspective: 10rem;
+}
+.image-wrapper-1::before
+{
+    content: "";
+    height:3rem;
+    width: 110rem;
+    background: linear-gradient(90deg,#8c4208,#7a3805,#662d01);
+    position: absolute;
+    top:18rem;
+    left:9rem;
+    box-shadow: 1rem 1rem 5rem #000;
+}
+.image-wrapper-1::after
+{
+    content: "";
+    height: 8rem;
+    width:110rem;
+    background: linear-gradient(90deg,#8c4208,#7a3805,#662d01);
+    opacity: 0.85;
+    top: calc(17rem - 7rem);
+    left: 9rem;
+    position: absolute;
+    transform: rotateX(20deg);
+    transform-origin: bottom;
+}
+.image-wrapper-2
+{
+    perspective: 10rem;
+}
+.image-wrapper-2::before
+{
+    content: "";
+    height:3rem;
+    width: 110rem;
+    background: linear-gradient(90deg,#8c4208,#7a3805,#662d01);
+    position: absolute;
+    top:40rem;
+    left:9rem;
+    box-shadow: 1rem 1rem 5rem #000;
+}
+.image-wrapper-2::after
+{
+    content: "";
+    height: 6rem;
+    width:110rem;
+    background: linear-gradient(90deg,#8c4208,#7a3805,#662d01);
+    opacity: 0.85;
+    position: absolute;
+    top: calc(40rem - 6rem);
+    transform: rotateX(20deg);
+    transform-origin: bottom;
+    left: 9rem;
+}
+/* End of section-4 */
+/* Section-5 */
+.footer
+{
+    height: 6rem;
+    text-align: center;
+}
+/* End of section-5 */
